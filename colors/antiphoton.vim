@@ -37,15 +37,24 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi TabLine ctermbg=253 ctermfg=242 cterm=NONE guibg=#dadada guifg=#6c6c6c gui=NONE
     hi TabLineSel ctermbg=255 ctermfg=134 cterm=bold guibg=#eeeeee guifg=#af5fd7 gui=bold
     hi WildMenu ctermbg=203 ctermfg=231 cterm=NONE guibg=#d75f5f guifg=#ffffff gui=NONE
-    hi VertSplit ctermbg=255 ctermfg=255 cterm=NONE guibg=#eeeeee guifg=#eeeeee gui=NONE
+    " hi VertSplit ctermbg=255 ctermfg=255 cterm=NONE guibg=#eeeeee guifg=#eeeeee gui=NONE
+    highlight VertSplit ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
+    set fillchars=vert:▒
     hi Title ctermbg=NONE ctermfg=233 cterm=bold guibg=NONE guifg=#121212 gui=bold
     hi LineNr ctermbg=NONE ctermfg=246 cterm=NONE guibg=NONE guifg=#949494 gui=NONE
     hi CursorLineNr ctermbg=255 ctermfg=134 cterm=NONE guibg=#eeeeee guifg=#af5fd7 gui=NONE
-    hi Cursor ctermbg=134 ctermfg=233 cterm=NONE guibg=#af5fd7 guifg=#121212 gui=NONE
+    " hi Cursor ctermbg=134 ctermfg=233 cterm=NONE guibg=#af5fd7 guifg=#121212 gui=NONE
+    hi Cursor ctermbg=39 ctermfg=233 cterm=NONE guibg=#87CEFA guifg=#121212 gui=NONE
+
     hi CursorLine ctermbg=255 ctermfg=NONE cterm=NONE guibg=#eeeeee guifg=NONE gui=NONE
     hi SignColumn ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#6c6c6c gui=NONE
-    hi Visual ctermbg=254 ctermfg=NONE cterm=NONE guibg=#e4e4e4 guifg=NONE gui=NONE
     hi VisualNOS ctermbg=253 ctermfg=NONE cterm=NONE guibg=#dadada guifg=NONE gui=NONE
+    " hi Visual ctermbg=254 ctermfg=NONE cterm=NONE guibg=#e4e4e4 guifg=NONE gui=NONE
+    " hi Visual ctermbg=222 ctermfg=NONE gui=NONE guibg=#F5DEB3 guifg=NONE
+    hi Visual ctermbg=223 ctermfg=NONE gui=NONE guibg=#E5C489 guifg=NONE
+    " hi Visual ctermbg=71 ctermfg=NONE gui=NONE guibg=#ADFF2F guifg=NONE
+
+
     hi Pmenu ctermbg=255 ctermfg=242 cterm=NONE guibg=#eeeeee guifg=#6c6c6c gui=NONE
     hi PmenuSbar ctermbg=254 ctermfg=NONE cterm=NONE guibg=#e4e4e4 guifg=NONE gui=NONE
     hi PmenuSel ctermbg=254 ctermfg=134 cterm=bold guibg=#e4e4e4 guifg=#af5fd7 gui=bold
@@ -53,8 +62,10 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Folded ctermbg=253 ctermfg=242 cterm=NONE guibg=#dadada guifg=#6c6c6c gui=NONE
     hi FoldColumn ctermbg=NONE ctermfg=166 cterm=NONE guibg=NONE guifg=#d75f00 gui=NONE
     hi SpecialKey ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#6c6c6c gui=NONE
-    hi IncSearch ctermbg=203 ctermfg=231 cterm=NONE guibg=#d75f5f guifg=#ffffff gui=NONE
-    hi Search ctermbg=134 ctermfg=231 cterm=NONE guibg=#af5fd7 guifg=#ffffff gui=NONE
+    " hi IncSearch ctermbg=203 ctermfg=231 cterm=NONE guibg=#d75f5f guifg=#ffffff gui=NONE
+    hi Search ctermbg=226 ctermfg=NONE guibg=#ffff00 guifg=NONE
+    hi IncSearch ctermbg=134 ctermfg=231 cterm=NONE guibg=#af5fd7 guifg=#ffffff gui=NONE
+    
     hi Directory ctermbg=NONE ctermfg=134 cterm=NONE guibg=NONE guifg=#af5fd7 gui=NONE
     hi MatchParen ctermbg=NONE ctermfg=203 cterm=bold guibg=NONE guifg=#d75f5f gui=bold
     hi SpellBad ctermbg=NONE ctermfg=124 cterm=underline guibg=NONE guifg=#af0000 gui=underline
@@ -94,7 +105,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi TabLine ctermbg=grey ctermfg=darkgray cterm=NONE
     hi TabLineSel ctermbg=white ctermfg=darkmagenta cterm=bold
     hi WildMenu ctermbg=red ctermfg=white cterm=NONE
-    hi VertSplit ctermbg=white ctermfg=white cterm=NONE
+    hi VertSplit ctermbg=black ctermfg=black cterm=NONE
     hi Title ctermbg=NONE ctermfg=black cterm=bold
     hi LineNr ctermbg=NONE ctermfg=gray cterm=NONE
     hi CursorLineNr ctermbg=white ctermfg=darkmagenta cterm=NONE
